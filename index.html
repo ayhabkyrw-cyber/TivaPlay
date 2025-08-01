@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar-eg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="ar-eg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TivaPlay</title>
+
+    <meta name="description" content="TivaPlay لمشاهدة الأفلام والمسلسلات بجودة عالية بدون إعلانات. استمتع بتجربة مشاهدة سلسة وممتعة مع مكتبة ضخمة من المحتوى المتنوع.">  
+    <meta name="keywords" content="TivaPlay, أفلام, مسلسلات, جودة عالية, بدون إعلانات, مشاهدة, محتوى متنوع">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        #NavigationBar {
+            background-color: #333;
+            padding: 15px 0;
+        }
+
+        #NavigationBar a img {
+            width: 180px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #NavigationBar ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #NavigationBar ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        #NavigationBar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        #NavigationBar ul li a:hover {
+            color: #fcbf49;
+        }
+
+        #Header {
+            background-color: #000;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #Header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        #Header p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        .section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: #fcbf49;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e0a800;
+        }
+
+        .movies {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .movies .movie {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .movies .movie:hover {
+            transform: scale(1.05);
+        }
+
+        .movies .movie img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #f4f4f4;
+        }
+
+        .movies .movie h3 {
+            padding: 20px;
+            font-size: 20px;
+            color: #333;
+            margin: 0;
+        }
+
+        .movies .movie p {
+            padding: 0 20px 20px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        #Chris {
+            background-color: #333;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #Chris h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        #Chris p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        #Chris a {
+            color: #fcbf49;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #DownloadSection {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #DownloadSection .download-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin: 10px;
+            background-color: #ff4c60;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        #DownloadSection .download-btn:hover {
+            background-color: #f03e4d;
+        }
+
+        #DownloadSection .web-btn {
+            background-color: #007bff;
+        }
+
+        #DownloadSection .web-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Start of NavigationBar -->
+    <div id="NavigationBar"> 
+        <a href="#">
+            <img src="assets/img/TivaPlay_11zon.jpg" alt="TivaPlay Logo">
+        </a>
+        <ul> 
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#AppInfo">صور من داخل التطبيق</a></li>
+            <li><a href="#DownloadSection">تحميل البرنامج</a></li>
+            <li><a href="#Chris">من نحن</a></li>
+        </ul>
+    </div>
+    <!-- 1. End of NavigationBar -->
+
+    <!-- 2. Start of Header -->
+    <div id="Header">
+        <h1>TivaPlay</h1>
+        <p>استمتع بمشاهدة الأفلام والمسلسلات بجودة عالية وبدون إعلانات.</p>  
+        <a href="#DownloadSection" class="btn">تحميل البرنامج</a>
+    </div>
+    <!-- 2. End of Header -->
+
+    <!-- 3. Start of "صور من داخل التطبيق" Section -->
+    <div id="AppInfo" class="section">
+        <h2>صور من داخل التطبيق</h2>
+        <img src="assets/img/‏‏لقطة الشاشة (282).png" alt="">
+        <img src="assets/img/‏‏لقطة الشاشة (283).png" alt="">
+        <img src="assets/img/‏‏لقطة الشاشة (285).png" alt="" srcset="img">
+        <img src="assets/img/‏‏لقطة الشاشة (284).png" alt="">
+    </div>
+    <!-- 3. End of "صور من داخل التطبيق" Section -->
+
+    <!-- 5. Start of "Download App or View Web" Section -->
+    <div id="DownloadSection">
+        <a href="https://www.mediafire.com/file/1252o05xjesnm2f/app3519193-v27uw5.apk/file" target="_blank" class="download-btn">تحميل التطبيق</a>
+        <a href="tivaplay.html" target="_blank" class="download-btn web-btn">المشاهدة عبر صفحة ويب</a>
+    </div>
+    <!-- 5. End of "Download App or View Web" Section -->
+
+    <!-- 6. Start of " من نحن" Section -->
+    <div id="Chris">
+        <h2>من نحن</h2>
+        <p>إذا كنت بحاجة لمزيد من المعلومات حول TivaPlay أو لديك أي استفسارات، لا تتردد في التواصل معنا. نحن هنا لخدمتك وتوفير أفضل تجربة لك في عالم الترفيه.</p>
+        <a href="contact.html">تواصل معنا</a>
+    </div>
+    <!-- 6. End of " من نحن" Section -->
+
+</body>
+</html>
